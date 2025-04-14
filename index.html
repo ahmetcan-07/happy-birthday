@@ -2,27 +2,97 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <title>İyi ki doğdun!</title>
+    <title>İyi ki doğdun Aylin! 🐣</title>
     <style>
-      body {
-        text-align: center;
-        background-color: #fff8f0;
-        font-family: 'Comic Sans MS', sans-serif;
-        padding-top: 100px;
-      }
-      h1 {
-        font-size: 3rem;
-        color: #ff69b4;
-      }
-      img {
-        max-width: 300px;
-        margin-top: 20px;
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-image: url('https://media1.tenor.com/m/AZjmGmFB2foAAAAC/chicken-chick.gif');
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    color: #ff69b4;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-shadow: 1px 1px 2px #fff;
+    color: #e60073;
+  }
+
+  p {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: #cc0066;
+  }
+
+      
+
+      .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+      audio {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <h1>İyi ki doğdun Aylin! 🎉</h1>
-    <p>Seni çok seviyorum 💕</p>
-    <img src="https://media.giphy.com/media/JfmCMK8X1bXjM/giphy.gif" alt="kutlama" />
+    <h1>İyi ki doğdun Hemşiremmm! 🎉</h1>
+    <p>Seni ço∞ok seviyorum 💕</p>
+
+    <!-- Müzik -->
+    <audio autoplay loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3" />
+      Tarayıcınız müziği desteklemiyor.
+    </audio>
+
+    <!-- Fotoğraf Galerisi -->
+    <div class="gallery">
+  <img src="/images/img1.jpeg" alt="photo1" />
+  <img src="/images/img2.jpeg" alt="photo1" />
+  <img src="/images/img3.jpeg" alt="photo1" />
+      <img src="/images/img4.jpeg" alt="photo1" />
+      <img src="/images/img5.jpeg" alt="photo1" />
+      <img src="/images/img6.jpeg" alt="photo1" />
+      <img src="/images/img7.jpeg" alt="photo1" />
+      <img src="/images/img8.jpeg" alt="photo1" />
+      <img src="/images/img9.jpeg" alt="photo1" />
+      <img src="/images/img10.jpeg" alt="photo1" />
+</div>
   </body>
 </html>
