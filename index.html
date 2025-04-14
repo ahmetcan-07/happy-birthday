@@ -4,79 +4,147 @@
     <meta charset="UTF-8" />
     <title>İyi ki doğdun Hemşiremmm! 🐣</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            text-align: center;
-            background-image: url('./public/images/img11.gif');
-            background-repeat: repeat;
-            background-size: 100px 100px;
-            color: #ff69b4;
-            position: relative;
-            margin:0;
-            padding:0;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        text-align: center;
+        background-image: url('./public/images/img11.gif');
+        background-repeat: repeat;
+        background-size: 100px 100px;
+        color: #ff69b4;
+        position: relative;
+      }
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-color: rgba(255, 255, 255, 0.6);
-            z-index: -1;
-        }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: -1;
+      }
 
-        h1 {
-            margin-top: 32px;
-            margin-bottom:0px;
-            font-size: 3.5rem; /* Yazı boyutunu büyüttüm */
-            background: rgba(255, 255, 255, 0.6);
-            display: inline-block;
-            border-radius: 12px;
-            text-shadow: 1px 1px 2px #fff;
-            color: #e60073;
-        }
+      h1 {
+        margin-top: 32px;
+        margin-bottom: 0px;
+        font-size: 3.5rem;
+        background: rgba(255, 255, 255, 0.6);
+        display: inline-block;
+        border-radius: 12px;
+        text-shadow: 1px 1px 2px #fff;
+        color: #e60073;
+      }
 
-        p {
-        margin-top:8px;
-            font-size: 2.5rem; /* Yazı boyutunu büyüttüm */
-            background: rgba(255, 255, 255, 0.6);
-            display: inline-block;
-            padding: 12px;
-            border-radius: 12px;
-            color: #cc0066;
-        }
+      p {
+        margin-top: 8px;
+        font-size: 2.5rem;
+        background: rgba(255, 255, 255, 0.6);
+        display: inline-block;
+        padding: 12px;
+        border-radius: 12px;
+        color: #cc0066;
+      }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+      }
 
-        .gallery img {
-            width: 200px;
-            height: 300px; /* Resim boyutunu değiştirdim */
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
+      .gallery img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
 
-        audio {
-            display: none;
-        }
+      audio {
+        display: none;
+      }
+
+      .btn {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding: 15px 25px;
+        font-size: 1.5rem;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #e60073;
+      }
+
+      /* Modal Stili */
+      .modal {
+        display: none; /* Başlangıçta gizli */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6); /* Modal arkaplanı */
+        padding-top: 60px;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        border-radius: 12px;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+        font-size: 2rem;
+        color: #ff69b4;
+        border: 2px solid #e60073;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .close {
+        color: #aaa;
+        font-size: 2rem;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
     </style>
   </head>
   <body>
-    <div style="display:flex;flex-direction:column">
+    <div style="display: flex; flex-direction: column;">
       <h1>İyi ki doğdun Hemşiremmm! 🎉</h1>
       <p>Seni ço∞ok seviyorum 💕</p>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          İyi ki hayatıma girdin, benim başımın tatlı belası :) iyi ki kader bizi bir araya getirdi.  Her geçen gün seni daha çok seviyorum, birlikte geçirdiğimiz her an çok kıymetli. Seninle gülmek, seninle ağlamak, hayata dair her şeyi paylaşmak çok özel. Hep yanımda ol, hep böyle güzel kal. Seni çok seviyorum!
+        </div>
+      </div>
     </div>
 
     <!-- Müzik -->
@@ -87,16 +155,38 @@
 
     <!-- Fotoğraf Galerisi -->
     <div class="gallery">
-        <img src="public/images/img1.jpeg" alt="photo1" />
-        <img src="public/images/img2.jpeg" alt="photo2" />
-        <img src="public/images/img3.jpeg" alt="photo3" />
-        <img src="public/images/img4.jpeg" alt="photo4" />
-        <img src="public/images/img5.jpeg" alt="photo5" />
-        <img src="public/images/img6.jpeg" alt="photo6" />
-        <img src="public/images/img7.jpeg" alt="photo7" />
-        <img src="public/images/img8.jpeg" alt="photo8" />
-        <img src="public/images/img9.jpeg" alt="photo9" />
-        <img src="public/images/img10.jpeg" alt="photo10" />
+      <img src="public/images/img1.jpeg" alt="photo1" />
+      <img src="public/images/img2.jpeg" alt="photo2" />
+      <img src="public/images/img3.jpeg" alt="photo3" />
+      <img src="public/images/img4.jpeg" alt="photo4" />
+      <img src="public/images/img5.jpeg" alt="photo5" />
+      <img src="public/images/img6.jpeg" alt="photo6" />
+      <img src="public/images/img7.jpeg" alt="photo7" />
+      <img src="public/images/img8.jpeg" alt="photo8" />
+      <img src="public/images/img9.jpeg" alt="photo9" />
+      <img src="public/images/img10.jpeg" alt="photo10" />
     </div>
+    
+    <!-- Buton -->
+      <button class="btn" onclick="openModal()">Tıkla Kadınnnn :)</button>
+
+    <script>
+      // Modalı açma fonksiyonu
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+
+      // Modalı kapama fonksiyonu
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+
+      // Modal dışına tıklanınca kapanmasını sağlama
+      window.onclick = function(event) {
+        if (event.target == document.getElementById('myModal')) {
+          closeModal();
+        }
+      }
+    </script>
   </body>
 </html>
