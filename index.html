@@ -150,10 +150,10 @@
     </div>
 
     <!-- Müzik -->
-    <audio autoplay loop>
-      <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3" />
-      Tarayıcınız müziği desteklemiyor.
-    </audio>
+    <audio id="audio" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3" />
+        Tarayıcınız müziği desteklemiyor.
+      </audio>
 
     <!-- Fotoğraf Galerisi -->
     <div class="gallery">
@@ -176,6 +176,8 @@
       // Modalı açma fonksiyonu
       function openModal() {
         document.getElementById('myModal').style.display = "block";
+          var audio = document.getElementById('audio');
+          audio.play(); // Müziği başlat
       }
 
       // Modalı kapama fonksiyonu
