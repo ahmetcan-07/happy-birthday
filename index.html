@@ -5,75 +5,76 @@
     <title>İyi ki doğdun Hemşiremmm! 🐣</title>
     <style>
         body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-align: center;
-    background-image: url('https://media1.tenor.com/m/AZjmGmFB2foAAAAC/chicken-chick.gif');
-    background-repeat: repeat;
-    background-size: 100px 100px;
-    color: #ff69b4;
-    position: relative;
-  }
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-image: url('https://media1.tenor.com/m/AZjmGmFB2foAAAAC/chicken-chick.gif');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            color: #ff69b4;
+            position: relative;
+        }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    z-index: -1;
-  }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index: -1;
+        }
 
-  h1 {
-    margin-top: 40px;
-    font-size: 3rem;
-    background: rgba(255, 255, 255, 0.6);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-shadow: 1px 1px 2px #fff;
-    color: #e60073;
-  }
+        h1 {
+            margin-top: 40px;
+            font-size: 4rem; /* Yazı boyutunu büyüttüm */
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-shadow: 1px 1px 2px #fff;
+            color: #e60073;
+        }
 
-  p {
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.6);
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 12px;
-    color: #cc0066;
-  }
+        p {
+            font-size: 1.5rem; /* Yazı boyutunu büyüttüm */
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 12px;
+            color: #cc0066;
+        }
 
-      
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-      .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
+        .gallery img {
+            width: 200px;
+            height: 300px; /* Resim boyutunu değiştirdim */
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
 
-.gallery img {
-  width: 200px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-      audio {
-        display: none;
-      }
+        audio {
+            display: none;
+        }
     </style>
   </head>
   <body>
-    <h1>İyi ki doğdun Hemşiremmm! 🎉</h1>
-    <p>Seni ço∞ok seviyorum 💕</p>
+    <div style="display:flex;flex-direction:column">
+      <h1>İyi ki doğdun Hemşiremmm! 🎉</h1>
+      <p>Seni ço∞ok seviyorum 💕</p>
+    </div>
 
     <!-- Müzik -->
     <audio autoplay loop>
@@ -83,16 +84,16 @@
 
     <!-- Fotoğraf Galerisi -->
     <div class="gallery">
-  <img src="public/images/img1.jpeg" alt="photo1" />
-  <img src="public/images/img2.jpeg" alt="photo1" />
-  <img src="public/images/img3.jpeg" alt="photo1" />
-      <img src="public/images/img4.jpeg" alt="photo1" />
-      <img src="public/images/img5.jpeg" alt="photo1" />
-      <img src="public/images/img6.jpeg" alt="photo1" />
-      <img src="public/images/img7.jpeg" alt="photo1" />
-      <img src="public/images/img8.jpeg" alt="photo1" />
-      <img src="public/images/img9.jpeg" alt="photo1" />
-      <img src="public/images/img10.jpeg" alt="photo1" />
-</div>
+        <img src="public/images/img1.jpeg" alt="photo1" />
+        <img src="public/images/img2.jpeg" alt="photo2" />
+        <img src="public/images/img3.jpeg" alt="photo3" />
+        <img src="public/images/img4.jpeg" alt="photo4" />
+        <img src="public/images/img5.jpeg" alt="photo5" />
+        <img src="public/images/img6.jpeg" alt="photo6" />
+        <img src="public/images/img7.jpeg" alt="photo7" />
+        <img src="public/images/img8.jpeg" alt="photo8" />
+        <img src="public/images/img9.jpeg" alt="photo9" />
+        <img src="public/images/img10.jpeg" alt="photo10" />
+    </div>
   </body>
 </html>
